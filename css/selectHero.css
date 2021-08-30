@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* 영역 */
+#sect_select_hero{
+    display:flex;flex-wrap:wrap;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    width:100%;
+    padding:2.5rem 0 2rem; margin-top:2rem;
+    background:url(../img/bg_black.jpg) no-repeat center top / 100% 100%;
+    text-align:center;color:#fff;}
+    
+/* 🚩 제목 */
+.title__select_hero{
+    position:relative;
+    margin-bottom:2.5rem;
+    font-family:var(--f-over);font-size:1.7rem;color:rgba(255,255,255,.8);}
+
+.title__select_hero h2{
+    transform:var(--skewX);
+    font-weight:normal;
+    mix-blend-mode:normal;}
+
+.title__select_hero .light{/* outline:1px solid red; */
+    position:absolute; opacity:.2;
+    width:15em;height:2em;
+    left:calc(50% - 7.5em);top:.8ch;
+    animation:lightBlink 1s linear alternate both infinite;}
+
+@keyframes lightBlink {
+    from{opacity:.2;}
+    to{opacity:.3;}}
+
+/* 🚩 ui - 영역 */
+#select_hero{
+    position:relative;
+    font-family:var(--f-over); font-weight:normal;font-size:1.5rem;
+}
+#select_hero li{
+    display:flex;flex-wrap:wrap;
+    justify-content:flex-start;
+    align-items:center;
+    position:relative;
+    margin-bottom:1rem;}
+
+/* 📍 ui - 클래스 */
+[for ^= "ipt_class-"]{
+    display:block;position:relative;
+    margin-right:2rem;
+    font-size:1.2rem;color:rgba(255,255,255,.4);
+    transition:all .3s;}
+
+[for ^= "ipt_class-"] p{
+    position:relative;text-align:left;
+    padding-left:2em;}
+
+    /* 클래스 아이콘 */
+    [for ^= "ipt_class-"] p::before{ 
+        content:'';display:block;position:absolute;
+        opacity:.3;
+        left:0;top:0;
+        width:1em;height:1em;
+        background-size:auto 100%;background-position:center center;}
+
+    [for = "ipt_class-tank"] p::before{
+        background-image:url(../img/ic/ic_tank.svg);}
+    [for = "ipt_class-dps"]  p::before{
+        background-image:url(../img/ic/ic_dps.svg);}
+    [for = "ipt_class-hps"]  p::before{
+        background-image:url(../img/ic/ic_hps.svg);}
+
+    /* 체크시 */
+    [id ^= "ipt_class-"]:checked + 
+    [for ^= "ipt_class-"]{color:rgba(255,255,255,.8);}
+
+    [id ^= "ipt_class-"]:checked + [for ^= "ipt_class-"] p::after{
+        content:'';display:block;position:absolute;
+        opacity:.5;
+        left:1em;bottom:-30%;
+        width:100%;height:1em;
+        background:radial-gradient(rgba(255,255,255,1),rgba(255,255,99,1),rgba(241,127,67,.5),transparent);
+        mix-blend-mode:overlay;}
+
+    [id ^= "ipt_class-"]:checked + 
+    [for ^= "ipt_class-"] p::before{
+        filter:drop-shadow(0px 0px .5rem rgba(255,255,99,1));
+        opacity:.8;}
+
+/* 📍 ui - 영웅 개별 */
+[for ^= "ipt_hero-"],[for ^= "ipt_hero_none-"]{
+    display:block;
+    position:relative;
+    transform:var(--skewX);
+    padding: .3em .5em; margin-right:5px; margin-bottom:5px;
+    background-color:rgba(255,255,255,.2);
+    border-radius:2px;
+    font-size:1.4rem;font-weight:normal;color:rgba(255,255,255,.2);
+    transition:all .2s;}
+
+[for ^= "ipt_hero-"] p,
+[for ^= "ipt_hero_none-"] p{
+    pointer-events:none;
+    transform:skew(6deg);}
+
+[id ^= "ipt_hero-"]:checked + [for ^= "ipt_hero-"]{
+    background-color:var(--orange80);
+    color:#fff;
+    box-shadow:var(--box-shadow--orange);
+    text-shadow:var(--t-shadow-yellow);}
+
+/* 🚩 모두 보기 */
+#sect_select_hero .lbl_ipt_chk p{
+    margin-top:1.3rem;
+    color:rgba(255,255,255,.3);
+    pointer-events:none;}
+
+#sect_select_hero .lbl_ipt_chk [type="checkbox"]:checked + p{
+    margin-top:1.3rem;
+    color:rgba(255,255,255,.8);}

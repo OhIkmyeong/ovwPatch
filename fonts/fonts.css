@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'koverwatch';
+    src:url('koverwatch.eot');
+    src:url('koverwatch-webfont.eot?#iefix') format('embedded-opentype'),
+        url('koverwatch.woff') format('woff'),
+        /* url('koverwatch-webfont.woff2') format('woff2'), */
+        url('koverwatch.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* https://convertio.co/kr/ */

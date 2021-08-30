@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>오버워치 패치노트 영웅별 통계</title>
+<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="./fonts/fonts.css" rel="stylesheet" type="text/css"/>
+<link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+<link href="./css/mainGraph.css" rel="stylesheet" type="text/css"/>
+<link href="./css/mostHero.css" rel="stylesheet" type="text/css"/>
+<link href="./css/selectHero.css" rel="stylesheet" type="text/css"/>
+<link href="./css/tableHero.css" rel="stylesheet" type="text/css"/>
+<!--  -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/fetch.js" type="module" defer></script>
+</head>
+<body>
+
+<!-- 🚩 경고 -->
+<div id="copyright">
+    <div id="maker">만든이 : 별난오크#32725</div>
+    <div>본 페이지는 개인적 취미 및 공부 목적으로 제작하였으며 상업적이지 않습니다. <br>모든 이미지와 폰트의 저작권은 저에게 없습니다.</div>
+</div><!-- copyright -->
+
+<!-- 🚩 타이틀 -->
+<section id="mainTitle">
+    <div id="title__date">
+        <span>2019.11.20</span> ~ <span>2021.08.27</span>
+    </div>
+    <h2>오버워치 패치노트</h2>
+    <div class="light"></div>
+    <h1>영웅별 통계</h1>
+    <div class="text">
+        지금까지 어떤 영웅들이<br><strong class="f_italic">얼마나 자주</strong> 패치노트에 등장했을까요?
+    </div>
+</section><!-- mainTitle -->
+
+<!-- 🚩 그래프 -->
+<section id="sect_mainGraph">
+    <select id="select_graph">
+        <option value="tank">돌격</option>
+        <option value="dps">공격</option>
+        <option value="hps">지원</option>
+        <option value="all" selected>전체 보기</option>
+    </select>
+    
+    <div id="bg_mainGraph">
+    </div><!-- line_mainGraph -->
+    
+    <ul id="mainGraph">
+        
+    </ul><!-- mainGraph -->
+</section><!-- sect_mainGraph -->
+
+<!-- 🚩 가장 많이 나온 영웅? -->
+<div class="title__mostHero">
+    <h2 class="title">지금까지 가장 많이 나온 영웅은?</h2>
+    <div class="light"></div>
+    <div class="more">패치노트의 으뜸 단골 손님은 바로...</div>
+</div><!-- title__mostHero -->
+
+<section id="sect_mostHero"><div class="wrap">
+    <div id="img_mostHero"></div>
+
+    <article id="right_mostHero">
+        <h3 id="name_mostHero"></h3>
+        <p id="info_mostHero"></p>
+        <p id="cv_mostHero"></p>
+
+        <ul id="status_mostHero">
+            <li class="num">
+                <div class="img">
+                    <img src="./img/ic/level.png" alt="">
+                    <div class="txt_img"><p id="mostHero_num">...</p></div>
+                </div>
+                <div class="txt">출연 횟수</div>
+            </li>
+            <li class="appear">
+                <div class="img">
+                    <div class="txt_img" id="mostHero_appear">....</div>
+                </div>
+                <div class="txt">최초 등장</div>
+            </li>
+            <li class="re" title="부정확합니다~!">
+                <div class="img">
+                    <img src="./img/skill/res_color.png" alt="">
+                    <div class="txt_img"><p id="mostHero_days"></p><span>days</span></div>
+                </div>
+                <div class="txt">재출연 소요기간</div>
+            </li>
+        </ul><!-- status_mostHero -->
+
+        <h6 class="title__vid_mostHero"><span>패치노트 목록</span></h6>
+
+        <ul id="vid_mostHero"></ul><!-- vid_mostHero -->
+    </article><!-- right_mostHero -->
+</div><!-- wrap --></section><!-- sect_mostHero -->
+
+<!-- 🚩 영웅 선택 -->
+<section id="sect_select_hero">
+    <div class="title__select_hero">
+        <h2>영웅을 선택하세요</h2>
+        <div class="light"></div>
+    </div><!-- title -->
+
+    <ul id="select_hero">
+        <li data-val="tank">
+            <input type="checkbox" id="ipt_class-tank" value="tank" checked/>
+            <label for="ipt_class-tank"><p>돌격</p></label>
+            <!--  -->
+            <input type="checkbox" id="ipt_hero-tank-dva" value="dva" checked/>
+            <label for="ipt_hero-tank-dva"><p>D.Va</p></label>
+
+            <input type="checkbox" id="ipt_hero-tank-reinhardt" value="reinhardt" checked/>
+            <label for="ipt_hero-tank-reinhardt"><p>라인하르트</p></label>
+
+            <input type="checkbox" id="ipt_hero-tank-wreckingball" value="wreckingball" checked/>
+            <label for="ipt_hero-tank-wreckingball"><p>레킹볼</p></label>
+
+            <input type="checkbox" id="ipt_hero-tank-roadhog" value="roadhog" checked/>
+            <label for="ipt_hero-tank-roadhog"><p>로드호그</p></label>
+
+            <input type="checkbox" id="ipt_hero-tank-sigma" value="sigma" checked/>
+            <label for="ipt_hero-tank-sigma"><p>시그마</p></label>
+
+            <input type="checkbox" id="ipt_hero-tank-orisa" value="orisa" checked/>
+            <label for="ipt_hero-tank-orisa"><p>오리사</p></label>
+
+            <input type="checkbox" id="ipt_hero-tank-winston" value="winston" checked/>
+            <label for="ipt_hero-tank-winston"><p>윈스턴</p></label>
+
+            <input type="checkbox" id="ipt_hero-tank-zarya" value="zarya" checked/>
+            <label for="ipt_hero-tank-zarya"><p>자리야</p></label>
+        </li><!-- tanker -->
+        
+        <li data-val="dps">
+            <input type="checkbox" id="ipt_class-dps" value="dps" checked/>
+            <label for="ipt_class-dps"><p>공격</p></label>
+            <!--  -->
+            <input type="checkbox" id="ipt_hero-dps-genji" value="genji" checked/>
+            <label for="ipt_hero-dps-genji"><p>겐지</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-doomfist" value="doomfist" checked/>
+            <label for="ipt_hero-dps-doomfist"><p>둠피스트</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-reaper" value="reaper" checked/>
+            <label for="ipt_hero-dps-reaper"><p>리퍼</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-mccree" value="mccree" checked/>
+            <label for="ipt_hero-dps-mccree"><p>맥크리</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-mei" value="mei" checked/>
+            <label for="ipt_hero-dps-mei"><p>메이</p></label>
+
+            <input type="checkbox" id="ipt_hero_none-dps-bastion" value="bastion" disabled/>
+            <label for="ipt_hero_none-dps-bastion"><p>바스티온</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-soldier76" value="soldier76" checked/>
+            <label for="ipt_hero-dps-soldier76"><p>솔저:76</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-sombra" value="sombra" checked/>
+            <label for="ipt_hero-dps-sombra"><p>솜브라</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-symmetra" value="symmetra" checked/>
+            <label for="ipt_hero-dps-symmetra"><p>시메트라</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-ashe" value="ashe" checked/>
+            <label for="ipt_hero-dps-ashe"><p>애쉬</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-echo" value="echo" checked/>
+            <label for="ipt_hero-dps-echo"><p>에코</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-widowmaker" value="widowmaker" checked/>
+            <label for="ipt_hero-dps-widowmaker"><p>위도우메이커</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-junkrat" value="junkrat" checked/>
+            <label for="ipt_hero-dps-junkrat"><p>정크랫</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-torbjorn" value="torbjorn" checked/>
+            <label for="ipt_hero-dps-torbjorn"><p>토르비욘</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-tracer" value="tracer" checked/>
+            <label for="ipt_hero-dps-tracer"><p>트레이서</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-pharah" value="pharah" checked/>
+            <label for="ipt_hero-dps-pharah"><p>파라</p></label>
+
+            <input type="checkbox" id="ipt_hero-dps-hanzo" value="hanzo" checked/>
+            <label for="ipt_hero-dps-hanzo"><p>한조</p></label>
+        </li><!-- dps -->
+
+        <li data-val="hps">
+            <input type="checkbox" id="ipt_class-hps" value="hps" checked/>
+            <label for="ipt_class-hps"><p>지원</p></label>
+            <!--  -->
+            <input type="checkbox" id="ipt_hero-hps-lucio" value="lucio" checked/>
+            <label for="ipt_hero-hps-lucio"><p>루시우</p></label>
+
+            <input type="checkbox" id="ipt_hero-hps-mercy" value="mercy" checked/>
+            <label for="ipt_hero-hps-mercy"><p>메르시</p></label>
+
+            <input type="checkbox" id="ipt_hero-hps-moira" value="moira" checked/>
+            <label for="ipt_hero-hps-moira"><p>모이라</p></label>
+
+            <input type="checkbox" id="ipt_hero-hps-baptiste" value="baptiste" checked/>
+            <label for="ipt_hero-hps-baptiste"><p>바티스트</p></label>
+
+            <input type="checkbox" id="ipt_hero-hps-brigitte" value="brigitte" checked/>
+            <label for="ipt_hero-hps-brigitte"><p>브리기테</p></label>
+
+            <input type="checkbox" id="ipt_hero-hps-ana" value="ana" checked/>
+            <label for="ipt_hero-hps-ana"><p>아나</p></label>
+
+            <input type="checkbox" id="ipt_hero-hps-zenyatta" value="zenyatta" checked/>
+            <label for="ipt_hero-hps-zenyatta"><p>젠야타</p></label>
+        </li><!-- hps -->
+    </ul><!-- select_hero -->
+</section><!-- sect_select_hero -->
+
+<!-- 🚩 영웅들 테이블 시작 -->
+<!-- 📍 TANKER -->
+<div class="wrap_tbl" data-wrap="tank"></div><!-- wrap_tbl 테이블 영역 끝 -->
+<div class="wrap_tbl" data-wrap="dps"></div><!-- wrap_tbl 테이블 영역 끝 -->
+<div class="wrap_tbl" data-wrap="hps"></div><!-- wrap_tbl 테이블 영역 끝 -->
+
+<!-- ⚡ 페이지 스크롤 이동 관련 -->
+<button id="btn_toTOP"><span>TOP</span></button>
+<button id="btn_toSELECT"><span>영웅<br>선택</span></button>
+</body>
+</html>

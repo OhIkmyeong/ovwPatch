@@ -1,0 +1,140 @@
+@charset "utf-8";
+:root{
+    --f-over:"koverwatch",sans-serif;
+    --f-noto:"Noto Sans KR",sans-serif;
+    --f-black:#212529;
+    --f-gray:#48545d;
+    --bg:#f6f6f6;
+    --border:#f2f1ed;
+    --sky:#e1f5fe;
+    --orange:rgb(240,100,20);
+    --orange80:rgba(240,100,20,.85);
+    --blue:rgb(0,125,209);
+    --gd:rgb(64,82,117);
+    --indigo-dark:#03141a;
+    --indigo:#132a4d;
+    --shadow-purple:rgba(101, 80, 152, 0.5);
+    --skewX:skewX(-6deg);
+    --blend-title:luminosity;
+    --wrap-wid:1120px;
+    --box-shadow--orange:
+        0px 0px 1rem 5px rgba(240,100,20,.2),
+        0px 0px 1rem 5px rgba(255,255,99,.03),
+        0px 0px 1rem rgba(255,255,99,.05);
+    --t-shadow-yellow:
+        0px 0px 2rem rgba(255,255,99,.5),
+        0px 0px 1rem rgba(255,255,99,1);
+    --btn-wid : 50px;
+}
+
+
+*{margin:0;padding:0;box-sizing:border-box;}
+li{list-style-type:none;}a{text-decoration:none;}img{vertical-align:middle;}
+
+html,body{
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+    width:100%;min-height:100vh;
+    background:
+        url(../img/bg.png) no-repeat center top / 100% auto,
+        fixed var(--bg) url(../img/bg_bottom_gd.png) no-repeat center bottom / 100% auto;
+    font-family:var(--f-noto);font-weight:400;font-size:16px;color:var(--f-black);}
+
+::-webkit-scrollbar{
+    width:5px;
+    background:#cdbdda;}
+
+::-webkit-scrollbar-thumb{background:var(--indigo);}
+
+
+::selection{
+    background-color:var(--orange);
+    color:#fff;
+    text-shadow:none;}
+
+    
+
+/* 🚩 폰트 */
+.f_italic{font-style:italic;}
+
+
+/* 🚩 인풋 - 체크박스 */
+[type="checkbox"]{
+    position:absolute;overflow:hidden;
+    width:1px;height:1px;
+    clip:rect(0,0,0,0);}
+
+label{position:relative;cursor:pointer;}
+
+.lbl_ipt_chk{display:block;}
+.lbl_ipt_chk p{position:relative;padding-left:2em;}
+.lbl_ipt_chk p::before{
+    content:'';display:block;position:absolute;
+    left:0;top:50%;
+    transform:translateY(-50%);
+    width:1.25em;height:1.25em;
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:4px;}
+
+.lbl_ipt_chk [type="checkbox"]:checked + p::before{
+    background:url(../img/ic/ipt_check.png) no-repeat center center / 90% auto;}
+
+    
+/* 🚩 빛 */
+.light::before,
+.light::after{
+    content:'';display:block;position:absolute;
+    left:0;top:0;
+    width:100%;height:100%;
+    background:url(../img/light_effect.png) no-repeat center center / 100% 100%;}
+    
+.light::before{
+    opacity:1;mix-blend-mode:hue;}
+.light::after{
+    opacity:1;mix-blend-mode:overlay;}
+
+/* 🚩 페이지 스크롤 이동 관련 */
+/* 📍 맨 위로 */
+#btn_toTOP{
+    display:block;position:fixed;
+    right:2rem;bottom:2rem;
+    width:var(--btn-wid); height:var(--btn-wid);
+    transform:var(--skewX);
+    background:rgba(255,255,255,.01);
+    backdrop-filter:blur(10px) saturate(110%);
+    border:2px solid var(--indigo);
+    font-family:var(--f-over);font-size:1.25rem;color:var(--indigo);
+    cursor:pointer;}
+
+#btn_toTOP:hover{background:rgba(255,255,255,.5);}
+
+#btn_toTOP span{
+    position:absolute;
+    left:0;bottom:.2em;
+    width:105%;
+    pointer-events:none;}
+
+#btn_toTOP span::after{
+    content:'';display:block;position:absolute;
+    top:-40%;left:48%;
+    width:5px;height:5px;
+    transform:rotate(45deg) translateX(-50%);
+    border:3px solid var(--indigo);border-width:3px 0 0 3px;}
+
+/* 📍 영웅선택으로 */
+#btn_toSELECT{
+    display:block;position:fixed;
+    right:1.7rem;bottom:calc(2rem + var(--btn-wid) + 1rem);
+    width:var(--btn-wid); height:var(--btn-wid);
+    transform:var(--skewX);
+    background:var(--indigo);
+    border:2px solid var(--indigo);
+    line-height:1.25em;
+    font-family:var(--f-over);font-size:.9rem;color:rgba(255,255,255,.7);
+    cursor:pointer;}
+
+#btn_toSELECT:hover{
+    background:rgba(255,255,255,.5);
+    color:var(--indigo);
+}
+#btn_toSELECT span{pointer-events:none;}

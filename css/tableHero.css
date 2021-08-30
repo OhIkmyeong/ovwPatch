@@ -1,0 +1,197 @@
+@charset "utf-8";
+/* 영역 */
+.wrap_tbl{
+    position:relative;
+    width:100%;max-width:var(--wrap-wid);
+    margin:3rem auto;}
+
+.wrap_tbl.off{display:none;}
+
+/* 🚩 제목 */
+.title__class{
+    display:flex;flex-wrap:wrap;
+    flex-direction:column;
+    align-items:center;
+    position:relative;
+    margin-bottom:5rem;
+    width:100%;
+    font-family:var(--f-over);font-weight:normal;font-size:20px;text-align:center;color:var(--f-gray);}
+
+.title__class::before{
+    content:'';display:block;position:absolute;
+    bottom:.5em;
+    width:100%;height:1px;
+    background:var(--f-gray);
+    clip-path: polygon(0% 0%, 0% 100%, 45% 100%, 45% 0, 55% 0, 55% 100%, 100% 100%, 100% 0%);}
+    
+.title__class img{width:2rem;height:auto;}
+
+.title__class p{
+    width:5.5em;
+    margin-top:1em;
+    border:1px solid var(--f-gray);border-width:0 1px;}
+
+/* 🚩 테이블 */
+.sect_tbl{ /* outline:1px solid red; */
+    display:grid;
+    grid-template-areas: 
+        "profile appearNum list"
+        "profile with with" ;
+    grid-template-columns:
+        180px 150px 1fr;
+    grid-gap:10px; gap:10px;
+    position:relative;
+    width:100%;
+    margin:1.5rem auto 3rem;}
+
+.sect_tbl.off{display:none;}
+
+/* 📍 왼쪽 - 사진 */
+.tbl_profile{
+    position:relative;
+    grid-area:profile;}
+
+.tbl_profile_frame{
+    position:relative; overflow:hidden;
+    width:95%;
+    background:url(../img/profile/bg_profile.jpg) no-repeat top center / 100% auto;
+    border-radius:2px;
+    box-shadow:0 0 1rem rgba(255,255,255,1);}
+
+.tbl_profile_frame img{
+    vertical-align:bottom;
+    width:100%;height:auto;}
+
+.txt_profile{
+    position:absolute;
+    left:0;bottom:0;
+    width:100%;
+    padding:1em 0 .8em;
+    background:rgba(19,42,77,.85);
+    text-align:center;font-family:var(--f-over);font-size:20px;color:rgba(255,255,255,.8);}
+
+.txt_profile img{
+    position:absolute;
+    opacity:.5;
+    top:.5em;left:.5em;
+    width:14px;height:auto;}
+    
+    /* 단독출연 여부 */
+    .isSolo{
+        display:block;position:relative;
+        width:95%;
+        transform:var(--skewX);
+        margin-top:.5em;padding:.3em 0;
+        background:rgba(0,0,0,.25);
+        border-radius:2px;
+        font-family:var(--f-over);text-align:center;font-size:1.2rem;color:rgba(255,255,255,.4);}
+
+    .isSolo.yes{
+        background:var(--orange80);
+        color:#fff;
+        box-shadow:var(--box-shadow--orange);
+        text-shadow:var(--t-shadow-yellow);}
+
+/* ⚡ 공통 - 테이블 타이틀 */
+.sect_tbl .title{
+    position:relative;
+    width:100%;
+    padding:.4em .5em;
+    background:var(--gd);
+    font-family:var(--f-over);font-size:14px;color:#fff;}
+
+/* ⚡ 공통 - 테이블 내용 영역 */
+.sect_tbl .cont{
+    position:relative;
+    width:100%;
+    padding:1rem;padding-bottom:2rem;}
+
+/* 📍 중간 - 출연횟수 */
+.tbl_appearNum{
+    position:relative;
+    grid-area:appearNum;}
+
+.appearNum{
+    position:relative;
+    width:110px; height:110px;
+    padding-top:.55em;
+    background:url(../img/ic/level_dark.png) no-repeat center top / 100% auto;
+    text-align:center;font-weight:bold;font-size:45px;color:var(--gd);
+    text-shadow:0px 0px 1rem rgba(255,255,255,1);}
+
+/* 📍 오른쪽 - 패치노트 목록 */
+.tbl_list{
+    position:relative;
+    grid-area:list;}
+
+.tbl_list .list{
+    display:flex;flex-wrap:wrap;
+    justify-content:flex-start;
+    align-items:flex-start;}
+
+.tbl_list .list li{
+    position:relative;
+    width:31%;
+    margin-bottom:1.5em;margin-right:3%;}
+
+    .tbl_list .list li:nth-child(3n){margin-right:0;}
+
+
+.tbl_list .list li .thumb{
+    position:relative;overflow:hidden;
+    width:90%;
+    aspect-ratio:16/8.5;
+    margin-bottom:1em;
+    border-radius:4px;}
+
+.tbl_list .list li .thumb img{width:100%;height:100%;object-fit:cover;}
+
+.tbl_list .list li .date{
+    display:block;
+    margin-bottom:.2em;
+    font-family:var(--f-over);color:var(--f-gray);}
+
+.tbl_list .list li a{
+    display:inline-block;
+    position:relative;
+    margin:.1rem 0;
+    font-size:1rem; font-weight:500; color:var(--f-black);}
+
+.tbl_list .list li a::after{ /* outline:1px solid red; */
+    content:'';display:inline-block;position:relative;
+    width:.85em;
+    aspect-ratio:1/1;
+    margin-left:.5em;
+    background:url(../img/ic/ic_popup.svg) no-repeat center center / 100% auto;}
+
+.tbl_list .list li a:hover{color:var(--orange);}
+
+
+
+/* 📍 오른쪽 - 함께한 영웅 */
+.tbl_with{
+    position:relative;
+    grid-area:with;}
+
+.tbl_with .with{
+    display:flex;flex-wrap:wrap;
+    align-items:flex-start;
+    position:relative;}
+
+.tbl_with .with li{
+    position:relative;
+    margin:.5rem;
+    text-align:center;font-family:var(--f-over);color:var(--gd);}
+
+.with_img{
+    position:relative;overflow:hidden;
+    transform:var(--skewX);
+    width:50px; height:45px;
+    margin-bottom:.5em;
+    background:rgba(255,255,255,.25);
+    border:2px solid var(--gd); border-radius:2px;
+    text-align:center;}
+
+.with_img img{
+    transform:skew(6deg);
+    width:130%;height:100%;object-fit:cover;}

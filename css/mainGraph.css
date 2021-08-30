@@ -1,0 +1,227 @@
+@charset "utf-8";
+/* 🚩 경고 */
+#copyright{
+    padding:30px 30px 0 0;
+    text-align:right;}
+#maker{
+    opacity:.8;
+    font-family:var(--f-over);}
+#maker + div{
+    opacity:.8;
+    margin-top:.5em;
+    font-size:12px;color:var(--f-gray);}
+
+/* 🚩 타이틀 */
+/* 영역 */
+#mainTitle{
+    position:relative;
+    margin-top:1rem;
+    font-family:var(--f-over);text-align:center;}
+    
+/* 기간 */
+#title__date{
+    font-family:var(--f-noto);font-size:14px;color:#fff;
+    text-shadow:0 0 1em rgb(125, 107, 153);}
+
+/* 오버워치 패치노트 */
+#mainTitle h2{
+    position:relative;
+    margin:.8rem 0;
+    transform:var(--skewX);
+    font-weight:normal;font-size:47px;color:var(--f-gray);
+    mix-blend-mode:var(--blend-title);}
+
+#mainTitle h2 +.light{/*  outline:1px solid red; */
+    position:absolute;
+    left:calc(50% - 180px);top:45px;
+    width:360px;height:60px;}    
+            
+/* 영웅별 통계 */    
+#mainTitle h1{
+    transform:var(--skewX);
+    font-weight:normal;font-size:90px;color:rgba(64,82,117,.8);
+    text-shadow:
+    0 0 1rem rgba(250,250,250,1),
+    0 0 .25rem rgba(200,200,200,1);
+    mix-blend-mode:multiply;}
+                
+/* 부가 텍스트 */
+#mainTitle .text{
+    margin-top:1.2em;
+    line-height:1.6em;
+    font-family:var(--f-noto);font-size:19px;color:var(--f-gray);
+    mix-blend-mode:multiply;}
+
+/* 🚩 ⚡⚡⚡⚡ 그래프 관련 */
+/* 영역 */
+#sect_mainGraph{ /* outline:2px solid white; */
+    position:relative;
+    width:100%;max-width:1600px;
+    height:240px;
+    margin:6rem auto;}
+    
+/* 📍 셀렉트 박스 */
+#select_graph{
+    -webkit-appearance: none; -moz-appearance: none;
+    appearance: none;
+    position:absolute;box-sizing:content-box;
+    top:-5rem;right:0;
+    padding:.5em 5em .5em .8em;
+    background:transparent url(../img/ic/arrow_select.png) no-repeat 101% center / auto 105%;
+    border:2px solid var(--gd);
+    letter-spacing:-0.05em;
+    font-family:inherit;font-weight:500;font-size:inherit;color:var(--gd);
+    cursor:pointer;}
+
+/* 📍 그래프 배경 */
+#bg_mainGraph{ /* outline:1px solid red; */
+    position:absolute;overflow:hidden;
+    top:0;left:0;
+    width:100%;height:100%;}
+
+#bg_mainGraph span{
+    display:block;position:absolute;
+    left:0;
+    width:100%;height:1px;
+    background:var(--border);
+    mix-blend-mode:multiply;}
+
+    #bg_mainGraph span:nth-child(1){top:0%;}
+    #bg_mainGraph span:nth-child(2){top:10%;}
+    #bg_mainGraph span:nth-child(3){top:20%;}
+    #bg_mainGraph span:nth-child(4){top:30%;}
+    #bg_mainGraph span:nth-child(5){top:40%;}
+    #bg_mainGraph span:nth-child(6){top:50%;}
+    #bg_mainGraph span:nth-child(7){top:60%;}
+    #bg_mainGraph span:nth-child(8){top:70%;}
+    #bg_mainGraph span:nth-child(9){top:80%;}
+    #bg_mainGraph span:nth-child(10){top:90%;}
+    #bg_mainGraph span:nth-child(11){top:100%;}
+
+/* 📍 그래프 내용 */
+#mainGraph{ /* outline:1px solid red; */
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    position:relative;
+    width:calc(100% - 80px); height:100%;
+    margin:0 auto;}
+#mainGraph li{
+    display:flex;flex-wrap:wrap;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+    position:relative;
+    width:calc(100% / 32);height:100%;
+    text-align:center;font-family:var(--f-over);color:var(--gd);
+    cursor:pointer;
+    transition:all .2s;}
+
+#mainGraph li.off,
+#mainGraph li[data-hero="bastion"]{
+    /* display:none; */
+    opacity:.1;}
+
+/* 그래프 - 영역 */
+.cont_graph{/* outline:1px solid red; */
+    position:absolute;overflow:hidden;
+    bottom:0;
+    width:100%; height:0%;/* ⚡ 조정 */}
+    
+/* 그래프 */
+.cont_graph .bar{
+    position:relative;
+    width:45%;height:100%;
+    margin:0 auto;
+    transform:skew(-30deg) rotate(-30deg) translateY(16px);
+    box-shadow:0 0 1rem rgba(255,255,255,1);
+    transition:height .3s;}
+    
+    /* 영웅별 색상 지정 */
+    [data-hero="dva"] .bar{background:linear-gradient(to bottom,#EB92C4, transparent);}
+    [data-hero="reinhardt"] .bar{background:linear-gradient(to bottom,#91A0A1, transparent);}
+    [data-hero="wreckingball"] .bar{background:linear-gradient(to bottom,#DA9142, transparent);}
+    [data-hero="roadhog"] .bar{background:linear-gradient(to bottom,#B38A50, transparent);}
+    [data-hero="sigma"] .bar{background:linear-gradient(to bottom,#939FA2, transparent);}
+    [data-hero="orisa"] .bar{background:linear-gradient(to bottom,#448A41, transparent);}
+    [data-hero="winston"] .bar{background:linear-gradient(to bottom,#A0A3B8, transparent);}
+    [data-hero="zarya"] .bar{background:linear-gradient(to bottom,#E980B5, transparent);}
+
+    [data-hero="genji"] .bar{background:linear-gradient(to bottom,#96EF42, transparent);}
+    [data-hero="doomfist"] .bar{background:linear-gradient(to bottom,#805048, transparent);}
+    [data-hero="reaper"] .bar{background:linear-gradient(to bottom,#7C3E51, transparent);}
+    [data-hero="mccree"] .bar{background:linear-gradient(to bottom,#AE595D, transparent);}
+    [data-hero="mei"] .bar{background:linear-gradient(to bottom,#71ACEA, transparent);}
+    [data-hero="bastion"] .bar{background:linear-gradient(to bottom,#7B9079, transparent);}
+    [data-hero="soldier76"] .bar{background:linear-gradient(to bottom,#677996, transparent);}
+    [data-hero="sombra"] .bar{background:linear-gradient(to bottom,#7259B9, transparent);}
+    [data-hero="symmetra"] .bar{background:linear-gradient(to bottom,#90BDCF, transparent);}
+    [data-hero="ashe"] .bar{background:linear-gradient(to bottom,#676869, transparent);}
+    [data-hero="echo"] .bar{background:linear-gradient(to bottom,#9BCCF5, transparent);}
+    [data-hero="widowmaker"] .bar{background:linear-gradient(to bottom,#9D6AA5, transparent);}
+    [data-hero="junkrat"] .bar{background:linear-gradient(to bottom,#EBBC51, transparent);}
+    [data-hero="torbjorn"] .bar{background:linear-gradient(to bottom,#BF746D, transparent);}
+    [data-hero="tracer"] .bar{background:linear-gradient(to bottom,#D89342, transparent);}
+    [data-hero="pharah"] .bar{background:linear-gradient(to bottom,#3C7AC6, transparent);}
+    [data-hero="hanzo"] .bar{background:linear-gradient(to bottom,#BBB58B, transparent);}
+
+    [data-hero="lucio"] .bar{background:linear-gradient(to bottom,#85c852, transparent);}
+    [data-hero="mercy"] .bar{background:linear-gradient(to bottom,#EBE8BB, transparent);}
+    [data-hero="moira"] .bar{background:linear-gradient(to bottom,#9772E3, transparent);}
+    [data-hero="baptiste"] .bar{background:linear-gradient(to bottom,#59AFCC, transparent);}
+    [data-hero="brigitte"] .bar{background:linear-gradient(to bottom,#865550, transparent);}
+    [data-hero="ana"] .bar{background:linear-gradient(to bottom,#6F88B0, transparent);}
+    [data-hero="zenyatta"] .bar{background:linear-gradient(to bottom,#EDE681, transparent);}
+
+/* 숫자 */
+.num_graph{
+    position:absolute;
+    top:.25em;left:0;
+    width:100%;
+    transform:skew(-6deg) rotate(-6deg);}
+
+/* 내용 - 영역 */
+.profile_graph{ /* outline:3px solid black; */
+    position:relative;}
+
+/* 초상화 */
+.profile_graph .img_cont{
+    position:relative; box-sizing:content-box; overflow:hidden;
+    width:35px;height:35px;
+    margin:0 auto;
+    transform:skew(-15deg) rotate(-15deg);
+    background:var(--gd);
+    border:2px solid #fff;border-radius:4px;}
+
+.profile_graph .img_cont img{
+    position:absolute;
+    left:50%;top:50%;
+    transform:skew(15deg) rotate(15deg) translate(-50%,-50%);
+    width:140%;height:150%;}
+
+/* 이름 */
+.profile_graph .name{ /* outline:1px solid red; */
+    position:absolute;
+    top:100%; left:50%;
+    width:100%;
+    transform:rotate(90deg);
+    transform-origin:left center;
+    text-align:left;font-size:1.25rem;
+    white-space:nowrap;
+    transition:all .1s linear;}
+
+    /* ⚡ hover */
+    #mainGraph li:hover .bar{
+        box-shadow:
+            0 0 1rem rgba(255,255,255,1),
+            0 0 2rem 1rem rgba(255,255,255,1),
+            0 0 5rem 1rem rgba(255,255,255,.5);
+    }
+
+    #mainGraph li:hover .img_cont{
+        box-shadow:5px 5px 1rem var(--shadow-purple);
+        transform:skew(-15deg) rotate(-15deg) scale(1.5);}
+
+    #mainGraph li:hover .name{
+        transform:rotate(90deg) scale(1.5) translateX(10px);
+        transition-delay:.1s;}

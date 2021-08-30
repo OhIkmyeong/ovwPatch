@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>유튜브 따오기</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<!-- https://stackoverflow.com/questions/1216029/get-title-from-youtube-videos -->
+<!-- https://stackoverflow.com/questions/30084140/youtube-video-title-with-api-v3-without-api-key -->
+
+    <div id="myLink">https://youtu.be/8D9QrPXlGeM</div>
+    <div id="myDiv">HELLO WORLD</div>
+
+    
+    
+<!-- 스크립트 -->
+
+<script>
+
+const myLink = document.getElementById('myLink');
+const myDiv = document.getElementById('myDiv');
+
+let myObj = {
+    "title" : "",
+    "date" : "",
+    "id" : "8D9QrPXlGeM"
+}
+
+let url = "https://www.youtube.com/watch?v=" + myObj.id;
+
+$.getJSON('https://noembed.com/embed', {format : 'json', url : url}, function(data){
+    myObj.title = data.title;
+    console.log(data);
+    displayTitle();
+});
+
+function displayTitle(){
+    myDiv.innerText = myObj.title;
+}
+
+</script>
+
+</body>
+</html>

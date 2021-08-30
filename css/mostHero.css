@@ -1,0 +1,204 @@
+@charset "utf-8";
+/* 🚩 제목 */
+.title__mostHero{
+    position:relative;
+    margin-top:10rem; text-align:center;}
+
+.title__mostHero .title{
+    position:relative;
+    margin-bottom:.4em;
+    transform:var(--skewX);
+    font-family:var(--f-over);font-weight:normal; font-size:45px; color:var(--f-gray);
+    mix-blend-mode:var(--blend-title);}
+    
+.title__mostHero .title + .light{
+    position:absolute;
+    left:calc(50% - 15ch);top:.5ch;
+    width:30ch; height:2ch;
+    font-size:45px;}
+
+.title__mostHero .more{font-size:1.1rem;}
+
+/* 🚩 영역 */
+#sect_mostHero{
+    position:relative;
+    width:100%;
+    margin-top:5rem;
+    background:url(../img/bg_blue_cut.png) no-repeat center top / 100% 480px;}
+
+#sect_mostHero .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    position:relative;
+    width:var(--wrap-wid);
+    margin:0 auto;}
+    
+/* 📍 이미지 */
+#img_mostHero{
+    position:relative;
+    width:calc(50% - 70px);}
+
+#img_mostHero img{
+    position:relative;
+    transform:translateY(-30px);
+    width:100%; height:600px; object-fit:contain;}
+    
+/* 📍 텍스트 - 영역 */
+#right_mostHero{
+    position:relative;
+    width:calc(50% + 20px);}
+    
+/* 📍 텍스트 - 영웅 소개 */
+#name_mostHero{
+    margin:1.1em 0 .25em;
+    font-family:var(--f-over);font-weight:normal;font-size:3rem;color:rgba(255,255,255,.9);
+    animation:blinkText 2s linear infinite alternate;
+    }
+
+    @keyframes blinkText {
+        0%{
+            text-shadow:
+            0px 0px .5rem rgba(255,255,255,3),
+            0px 0px 1rem rgba(199, 207, 255, 0.2);
+        }
+        100%{
+            text-shadow:
+            0px 0px .5rem rgba(71, 61, 116, 0.2),
+            0px 0px 1rem rgba(19, 12, 48, 0.3);
+        }
+    }
+
+#info_mostHero{
+    font-size:1.2rem;font-weight:400;color:rgba(255,255,255,.8);}
+    
+#cv_mostHero{
+    position:relative;
+    margin-top:1.5em; padding-left:1.9em;
+    font-weight:500;color:#fff;}
+
+    #cv_mostHero::before{ 
+        content:'';display:block;position:absolute;
+        opacity:.8;
+        left:0;top:0;
+        width:1.3em;height:1.5em;
+        background:url(../img/ic/ic_mic.svg) no-repeat center center / auto 100%;}
+
+/* 📍 텍스트 - 업적 */
+#status_mostHero{
+    display:flex;flex-wrap:wrap;
+    justify-content:flex-start;
+    align-items:flex-start;
+    position:relative;
+    width:100%;
+    margin:2rem 0 3rem;}
+
+#status_mostHero li{
+    position:relative;overflow:hidden;
+    width:112px;
+    margin-left:1rem; padding-bottom:1em;
+    background:rgba(3,20,26,.3);
+    border-radius:.5rem;
+    box-shadow:5px 5px 1rem rgba(0,0,0,.1);
+    font-family:var(--f-over);font-weight:normal;text-align:center;color:var(--sky);
+    transition:all .1s;}
+
+    #status_mostHero li:first-child{margin-left:0;}
+
+    #status_mostHero li:hover{
+        transform:scale(1.2);
+        box-shadow:
+        0 0 2rem 1rem rgba(59, 113, 230, 0.1),
+        0 0 1rem rgba(255,255,255,.1),
+        10px 10px 1rem rgba(0,0,0,.2);}
+    
+#status_mostHero .img{ 
+    position:relative;overflow:hidden;
+    width:100%;height:100px;}
+
+    #status_mostHero .txt_img{
+        position:absolute;
+        top:50%;left:0;
+        transform:translateY(-50%);
+        width:100%;
+        font-size:2rem;}
+
+    #status_mostHero .txt_img span{font-size:1.2rem;}
+
+#status_mostHero .img img{
+    position:absolute; opacity:.25;
+    left:50%;top:50%;
+    width:80%;height:auto;
+    transform:translate(-50%,-50%);}
+
+#status_mostHero .txt{
+    position:absolute;
+    left:0;bottom:0;
+    width:100%;
+    padding:.5em 0;
+    background:rgba(19, 12, 48, 0.3);}
+
+    /* 개별 설정 */
+    /* 출연횟수 */
+    #status_mostHero .num img{
+        opacity:1;width:90%;}
+    #status_mostHero .num .txt_img{
+        letter-spacing:-.05em;
+        font-family:var(--f-noto);font-weight:bold;font-size:2.5rem;}
+    /* 최초등장 */
+    #status_mostHero .appear .txt_img{top:45%;}
+    /* 재출연 소요기간 */
+    #status_mostHero .re .txt_img {line-height:.6em;font-size:2.5rem;}
+
+/* 📍 텍스트 - 패치노트 리스트(영상) */
+/* 제목 */
+.title__vid_mostHero{
+    position:relative;
+    margin-top:3rem;margin-bottom:1.5rem;
+    font-family:var(--f-over);font-size:1rem;font-weight:normal;color:var(--sky);}
+    
+.title__vid_mostHero span::after{
+    content:'';display:block;position:absolute;
+    opacity:.25;
+    top:50%; right:0;
+    width:calc(100% - 13ch);height:1px;
+    background:var(--sky);}
+
+/* 영상 목록 */
+#vid_mostHero{
+    display:flex;flex-wrap:wrap;
+    justify-content:flex-start;
+    align-items:flex-start;
+    position:relative;}
+
+#vid_mostHero li{
+    position:relative;
+    width:calc((100% / 3) - 16px);
+    margin:0 16px 2.5rem 0;}
+
+#vid_mostHero li a{
+    display:block;position:relative;
+    width:100%;}
+
+#vid_mostHero .imgCont{
+    position:relative;overflow:hidden;
+    width:100%; aspect-ratio:6/3.4;
+    margin-bottom:.8rem;
+    border-radius:4px;
+    box-shadow:5px 5px 1rem rgba(64, 65, 145,.3);}
+    
+    #vid_mostHero img{
+        width:100%;height:100%;object-fit:cover; }
+
+#vid_mostHero .date{
+    opacity:.8;
+    font-size:.8rem;color:var(--f-gray);}
+
+#vid_mostHero .title{
+    word-wrap:break-word;
+    line-height:1.4em;
+    font-weight:500;font-size:0.9rem;color:var(--f-black);}
+
+    /* hover */
+    #vid_mostHero li:hover .imgCont{transform:scale(1.1);}
+    #vid_mostHero li:hover .title{color:var(--gd);}
