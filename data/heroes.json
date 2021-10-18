@@ -34,8 +34,8 @@
             "name" : "roadhog"
             ,"nameKR" : "로드호그"
             ,"solo" : false
-            ,"id" : ["mkDqNy2a4DI","7k_QBvUOIRk"]
-            ,"date" : ["2020-05-01","2021-03-24"]
+            ,"id" : ["mkDqNy2a4DI","7k_QBvUOIRk","ykOlhf6MXzg"]
+            ,"date" : ["2020-05-01","2021-03-24","2021-10-15"]
             ,"with" : ["junkrat"]
             ,"cv" : ["김대중"]
             ,"info" : "초인적인 힘과 잔혹함, 파괴적인 성향으로 악명이 자자한 살인마"
@@ -86,8 +86,8 @@
             "name" : "genji"
             ,"nameKR" : "겐지"
             ,"solo" : true
-            ,"id" : ["bfUd7rTrDDc","Se_wkCGdkN8","sdsvmffrI7M","dYFl6h83HQ8"]
-            ,"date" : ["2020-04-10","2020-06-05","2020-10-16","2021-03-12"]
+            ,"id" : ["bfUd7rTrDDc","Se_wkCGdkN8","sdsvmffrI7M","dYFl6h83HQ8","PjrdDW04_IA"]
+            ,"date" : ["2020-04-10","2020-06-05","2020-10-16","2021-03-12","2021-09-10"]
             ,"with" : ["hanzo","zenyatta","mercy"]
             ,"cv" : ["김혜성"]
             ,"info" : "기계가 되어버린 몸을 받아들여 내면의 평화를 찾은 강력한 전사이자 사이보그 닌자"
@@ -207,8 +207,8 @@
             "name" : "junkrat"
             ,"nameKR" : "정크랫"
             ,"solo" : false
-            ,"id" : ["mkDqNy2a4DI","heG2EKVNCxU","7k_QBvUOIRk"]
-            ,"date" : ["2020-05-01","2020-11-20","2021-03-24"]
+            ,"id" : ["mkDqNy2a4DI","heG2EKVNCxU","7k_QBvUOIRk","ykOlhf6MXzg"]
+            ,"date" : ["2020-05-01","2020-11-20","2021-03-24","2021-10-15"]
             ,"with" : ["roadhog","wreckingball"]
             ,"cv" : ["진정일"]
             ,"info" : "폭발물에 집착하며 혼돈과 파괴를 불어오기 위해 살아가는 미치광이"
@@ -279,9 +279,9 @@
         ,{
             "name" : "moira"
             ,"nameKR" : "모이라"
-            ,"solo" : false
-            ,"id" : ["LNrYjjCrbl4","lyfxGdnwAbg","pxlVOPS30Bs"]
-            ,"date" : ["2020-05-08","2020-07-17","2020-12-18"]
+            ,"solo" : true
+            ,"id" : ["LNrYjjCrbl4","lyfxGdnwAbg","pxlVOPS30Bs","sChXFlVABi8"]
+            ,"date" : ["2020-05-08","2020-07-17","2020-12-18","2021-10-01"]
             ,"with" : ["widowmaker","sigma","mercy"]
             ,"cv" : ["이미나"]
             ,"info" : "윤리에 구애받지 않고 과학적인 발견을 추구하는 명석한 유전학자"
