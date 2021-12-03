@@ -4,9 +4,9 @@
             "name" : "dva"
             ,"nameKR" : "D.Va"
             ,"solo" : true
-            ,"id" : ["Pl-x9e7aaiw","kgt8cIbjEKM","OS90N6jhnmA","xhvfX2QBjkA","5NsgILB5I2s"]
-            ,"date" : ["2019-12-16","2020-06-12","2020-09-25","2020-11-27","2021-05-14"]
-            ,"with" : ["tracer","brigitte"]
+            ,"id" : ["Pl-x9e7aaiw","kgt8cIbjEKM","OS90N6jhnmA","xhvfX2QBjkA","5NsgILB5I2s","zsDms06VwQo","nGt1PkDZDm0","KgnLTy1IyZo"]
+            ,"date" : ["2019-12-16","2020-06-12","2020-09-25","2020-11-27","2021-05-14","2021-09-18","2021-10-06","2021-10-29"]
+            ,"with" : ["tracer","brigitte","mercy"]
             ,"cv" : ["김현지"]
             ,"info" : "최첨단 메카를 조종하여 조국을 수호하는 전 프로게이머"
         }
@@ -227,9 +227,9 @@
             "name" : "tracer"
             ,"nameKR" : "트레이서"
             ,"solo" : true
-            ,"id" : ["bXo5vazYoH8","gumd9OXk8Zc","OS90N6jhnmA","2OKHIof1Qns"]
-            ,"date" : ["2019-10-18","2020-07-03","2020-09-25","2021-01-22"]
-            ,"with" : ["widowmaker","dva","reaper"]
+            ,"id" : ["bXo5vazYoH8","gumd9OXk8Zc","OS90N6jhnmA","2OKHIof1Qns","uxUotMqmu2w","nGt1PkDZDm0"]
+            ,"date" : ["2019-10-18","2020-07-03","2020-09-25","2021-01-22","2021-09-08","2021-10-06"]
+            ,"with" : ["widowmaker","dva","reaper","mercy"]
             ,"cv" : ["박신희"]
             ,"info" : "예전 오버워치 요원이자 시간을 넘나드는 모험가, 정의의 편에서 싸우는 영웅"
         }
@@ -270,9 +270,9 @@
             ,"nameKR" : "메르시"
             ,"solo" : true
             ,"id" : ["tDEC19eFIUw","Hu4yEVfYFDQ","VtH79qnN4Ts","sdsvmffrI7M",
-            "pxlVOPS30Bs","Ad2wXE6dXgA"]
-            ,"date" : ["2019-11-20","2020-06-26","2020-08-21","2020-10-16","2020-12-18","2021-04-09"]
-            ,"with" : ["baptiste","pharah","genji","moira"]
+            "pxlVOPS30Bs","Ad2wXE6dXgA","nGt1PkDZDm0"]
+            ,"date" : ["2019-11-20","2020-06-26","2020-08-21","2020-10-16","2020-12-18","2021-04-09","2021-10-06"]
+            ,"with" : ["baptiste","pharah","genji","moira","dva","tracer"]
             ,"cv" : ["이현진"]
             ,"info" : "수호천사, 발군의 치유사, 천재적인 의료 과학자, 열성적인 평화주의자"
         }
