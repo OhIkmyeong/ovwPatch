@@ -23,9 +23,9 @@
         ,{
             "name" : "wreckingball"
             ,"nameKR" : "레킹볼"
-            ,"solo" : false
-            ,"id" : ["Yp3YfW1CkBU","OoemNxIYWvw","heG2EKVNCxU"]
-            ,"date" : ["2020-07-10","2020-08-14","2020-11-20"]
+            ,"solo" : true
+            ,"id" : ["Yp3YfW1CkBU","OoemNxIYWvw","heG2EKVNCxU","3NANtMgM4qo"]
+            ,"date" : ["2020-07-10","2020-08-14","2020-11-20","2021-12-17"]
             ,"with" : ["sombra","orisa","junkrat"]
             ,"cv" : ["한복현"]
             ,"info" : "구르는 로봇을 조종하는 달 출신의 유전자 조작 햄스터"
