@@ -32,7 +32,7 @@ Doom
 Reaper
 #7C3E51
 
-Mccree
+cassidy
 #AE595D
 
 Mei

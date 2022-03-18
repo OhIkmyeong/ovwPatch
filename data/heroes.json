@@ -108,16 +108,16 @@
             ,"solo" : false
             ,"id" : ["X_zoW3_EtUE","zhtBR5ochGY","2OKHIof1Qns"]
             ,"date" : ["2020-04-24","2020-09-18","2021-01-22"]
-            ,"with" : ["soldier76","mccree","tracer"]
+            ,"with" : ["soldier76","cassidy","tracer"]
             ,"cv" : ["신용우"]
             ,"info" : "예전 오버워치 요원들을 사냥하는 냉혹한 살인마 용병"
         }
         ,{
-            "name" : "mccree"
-            ,"nameKR" : "맥크리"
+            "name" : "cassidy"
+            ,"nameKR" : "캐서디"
             ,"solo" : true
-            ,"id" : ["F4bWThfQVO8","gZmIla_9zkM","zhtBR5ochGY","JRYpwKc3o6s"]
-            ,"date" : ["2020-02-28","2020-07-24","2020-09-18","2021-06-04"]
+            ,"id" : ["F4bWThfQVO8","gZmIla_9zkM","zhtBR5ochGY","JRYpwKc3o6s","GS7K_wr9Ago"]
+            ,"date" : ["2020-02-28","2020-07-24","2020-09-18","2021-06-04","2022-01-12"]
             ,"with" : ["ashe","ana","reaper"]
             ,"cv" : ["곽윤상"]
             ,"info" : "자신만의 방식으로 정의를 실현하는 총잡이 무법자"
@@ -179,7 +179,7 @@
             ,"solo" : true
             ,"id" : ["F4bWThfQVO8","ikygW9v78bM","oVx9lw0yG-M"]
             ,"date" : ["2020-02-28","2020-08-28","2021-06-25"]
-            ,"with" : ["mccree"]
+            ,"with" : ["cassidy"]
             ,"cv" : ["사문영"]
             ,"info" : "미국 남서부를 뒤흔들고 있는 악명높은 데드락 갱단의 두목"
         }
@@ -227,8 +227,8 @@
             "name" : "tracer"
             ,"nameKR" : "트레이서"
             ,"solo" : true
-            ,"id" : ["bXo5vazYoH8","gumd9OXk8Zc","OS90N6jhnmA","2OKHIof1Qns","uxUotMqmu2w","nGt1PkDZDm0"]
-            ,"date" : ["2019-10-18","2020-07-03","2020-09-25","2021-01-22","2021-09-08","2021-10-06"]
+            ,"id" : ["bXo5vazYoH8","gumd9OXk8Zc","OS90N6jhnmA","2OKHIof1Qns","uxUotMqmu2w","nGt1PkDZDm0","ArpmxUmnjs8","lyPJ59MHLzM"]
+            ,"date" : ["2019-10-18","2020-07-03","2020-09-25","2021-01-22","2021-09-08","2021-10-06","2022-02-25","2022-03-18"]
             ,"with" : ["widowmaker","dva","reaper","mercy"]
             ,"cv" : ["박신희"]
             ,"info" : "예전 오버워치 요원이자 시간을 넘나드는 모험가, 정의의 편에서 싸우는 영웅"
@@ -312,7 +312,7 @@
             ,"solo" : true
             ,"id" : ["HlqxB7YcxnM","gZmIla_9zkM","si8Gkg-pPDo","0jntnJwuSOg"]
             ,"date" : ["2020-04-17","2020-07-24","2020-10-23","2021-05-21"]
-            ,"with" : ["pharah","mccree","soldier76"]
+            ,"with" : ["pharah","cassidy","soldier76"]
             ,"cv" : ["이영리"]
             ,"info" : "새로운 세대를 지키기 위해 수년간의 은둔 생활에서 돌아온 베테랑 오버워치 요원"
         }

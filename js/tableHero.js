@@ -173,8 +173,8 @@ function to_KRname(partner){
             tempKR = "둠피스트";break;
         case "reaper" :
             tempKR = "리퍼";break;
-        case "mccree" :
-            tempKR = "맥크리";break;
+        case "cassidy" :
+            tempKR = "캐서디";break;
         case "mei" :
             tempKR = "메이";break;
         case "bastion" :
